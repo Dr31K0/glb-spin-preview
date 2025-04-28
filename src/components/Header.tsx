@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Cube } from "lucide-react";
+import { Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
@@ -13,7 +13,7 @@ export default function Header({ onClearModel, hasModel }: HeaderProps) {
   return (
     <header className="container mx-auto flex items-center justify-between py-4">
       <div className="flex items-center gap-2">
-        <Cube className="h-6 w-6 text-primary" />
+        <Package className="h-6 w-6 text-primary" />
         <h1 className="text-xl font-bold">GLB Viewer</h1>
       </div>
       

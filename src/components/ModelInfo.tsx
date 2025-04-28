@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Cube, File, Download } from "lucide-react";
+import { Package, File, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
@@ -15,7 +15,7 @@ export default function ModelInfo({ fileName, fileSize, downloadUrl }: ModelInfo
     return (
       <div className="rounded-md border bg-card p-4">
         <div className="flex items-center gap-2 text-muted-foreground">
-          <Cube size={18} />
+          <Package size={18} />
           <p className="text-sm">No model loaded</p>
         </div>
       </div>
@@ -26,7 +26,7 @@ export default function ModelInfo({ fileName, fileSize, downloadUrl }: ModelInfo
     <div className="rounded-md border bg-card p-4">
       <div className="flex flex-col gap-3">
         <div className="flex items-center gap-2">
-          <Cube size={20} className="text-primary" />
+          <Package size={20} className="text-primary" />
           <h3 className="font-medium">Model Information</h3>
         </div>
         
