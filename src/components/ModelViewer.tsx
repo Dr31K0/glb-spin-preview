@@ -1,5 +1,5 @@
 
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   OrbitControls,
@@ -51,6 +51,7 @@ interface ModelViewerProps {
 
 export default function ModelViewer({ modelUrl }: ModelViewerProps) {
   const [isMounted, setIsMounted] = useState(false);
+  const orbitControlsRef = useRef(null);
 
   useEffect(() => {
     setIsMounted(true);
@@ -88,6 +89,7 @@ export default function ModelViewer({ modelUrl }: ModelViewerProps) {
           <Environment preset="warehouse" />
         </Suspense>
         <OrbitControls
+          ref={orbitControlsRef}
           autoRotate={false}
           enableZoom={true}
           enablePan={true}

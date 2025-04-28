@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback, useRef, useEffect } from "react";
 import ModelViewer from "@/components/ModelViewer";
 import FileUpload from "@/components/FileUpload";
@@ -7,13 +6,13 @@ import Header from "@/components/Header";
 import ViewerControls from "@/components/ViewerControls";
 import { Card } from "@/components/ui/card";
 
-const DEFAULT_MODEL_URL = null;
+const DEFAULT_MODEL_URL = "/AP_Clock.glb";
 
 const Index = () => {
   const [modelUrl, setModelUrl] = useState<string | null>(DEFAULT_MODEL_URL);
-  const [fileName, setFileName] = useState<string | null>(null);
-  const [fileSize, setFileSize] = useState<string | null>(null);
-  const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
+  const [fileName, setFileName] = useState<string | null>("AP_Clock.glb");
+  const [fileSize, setFileSize] = useState<string | null>("Default model");
+  const [downloadUrl, setDownloadUrl] = useState<string | null>(DEFAULT_MODEL_URL);
   const [autoRotate, setAutoRotate] = useState(false);
   const [wireframe, setWireframe] = useState(false);
 
@@ -99,7 +98,7 @@ const Index = () => {
             <Card className="flex flex-1 flex-col p-4">
               <h3 className="mb-2 font-medium">Instructions</h3>
               <ul className="text-sm space-y-2 text-muted-foreground">
-                <li>• <strong>Rotate:</strong> Click and drag</li>
+                <li>��� <strong>Rotate:</strong> Click and drag</li>
                 <li>• <strong>Pan:</strong> Right-click and drag</li>
                 <li>• <strong>Zoom:</strong> Scroll wheel</li>
                 <li>• <strong>Reset:</strong> Double-click</li>
